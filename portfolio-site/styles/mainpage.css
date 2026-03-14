@@ -1,0 +1,205 @@
+/* Header */
+.home-page {
+  width: 100%;
+  background: var(--background);
+}
+
+.navbar {
+  margin: 0 auto;
+  height: 110px;
+  background: var(--header-red);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 148px;
+}
+
+.logo-image {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  padding-top: 45px;
+  font: var(--font-fixture-light);
+  font-size: var(--font-size-small);
+}
+
+.nav-link {
+  font-family: var(--font-fixture-light);
+  color: #f5f5f5;
+  font-size: var(--font-size-small);
+}
+
+/* Section1 */
+.hero {
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 1100px;
+  background-image: url('/assets/main1.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-overlay {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.hero-title {
+  font-family: var(--font-fixture-bold);
+  color: var(--text-main);
+  font-size: 90px;
+  line-height: 0.95;
+  text-transform: uppercase;
+  padding-left: 145px;
+  padding-top: 135px;
+  margin:0;
+}
+
+
+.hero-text, .hero-text1 {
+  font-family: var(--font-fixture-light);
+  color: var(--text-main);
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 1.35;
+  padding-right: 150px;
+  width: 495px;
+  text-align: justify;
+}
+
+.hero-text1 {
+  padding-top: 130px;
+}
+
+span {
+  font-family: var(--font-fixture-semibold);
+  font-size: 24px;
+  font-weight: 500px;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 257px;
+  height: 57px;
+  padding: 14px 24px;
+  border-radius: 70px;
+  background: var(--text-main);
+  color: var(--text-secondary);
+  font-family: var(--font-fixture-light);
+  font-size: var(--font-size-medium);
+  border: none;
+  cursor: pointer;
+  margin-top: 61px;
+}
+
+/* Section2 */
+.companies {
+  max-width: 1140px;
+  margin: 0 auto;
+  background: var(--background);
+}
+
+.companies-header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 49px;
+  padding-bottom: 53px;
+}
+
+.companies-title {
+  font-family: var(--font-fixture-Italic);
+  font-size: 96px;
+}
+
+.awards-title {
+  font-family: var(--font-fixture-Italic);
+  font-size: 96px;
+  align-self: flex-end;
+}
+
+.companies-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px;
+  border-top: 1px solid #333;
+  padding-top: 40px;
+  position: relative;
+}
+
+.companies-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(66.666% + 40px);
+  width: 1px;
+  background: #333;
+}
+
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.awards {
+  padding-left: 40px;
+}
+
+.job h4 {
+  font-size: 24px;
+  font-family: var(--font-fixture-semibold);
+  color: var(--text-secondary);
+  margin: 0px;
+}
+
+.role1 {
+  font-size: 24px;
+  font-family: var(--font-fixture-light);
+  color: var(--text-secondary);
+  margin: 0px;
+  padding-bottom:10px;
+}
+
+.role {
+  font-family: var(--font-fixture-Italic);
+  font-size: 24px;
+  margin: 0px;
+  padding-bottom: 10px;
+}
+
+.role1 {
+  font-size: 24px;
+  font-family: var(--font-fixture-light);
+  color: var(--text-secondary);
+  margin: 0px;
+  padding-bottom:10px;
+}
+
+.role2 {
+  font-size: 24px;
+  font-family: var(--font-fixture-light);
+  color: var(--text-secondary);
+  margin: 0px;
+  padding-bottom:20px;
+}
+
+

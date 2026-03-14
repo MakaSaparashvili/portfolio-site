@@ -1,0 +1,36 @@
+/* Variables */
+
+:root {
+    /* Color Variables */
+    --background: #F5F5F5;
+    --header-red: #CA3D27;
+    --header-yellow: #FFF688;
+    --text-main: #FFF688;
+    --text-secondary: #242424;
+
+   /* Font Variable */
+   --font: 'Ficture Ultra Italic', sans-serif;
+   --font-size-h1: 90px;
+   --font-weight-h1: bold;
+   --font-size-small: 16px;
+   --font-size-medium: 24px;
+
+    /* Other Variables */
+  --button-br: 70px;
+  --transition: all 0.3s ease-in-out;
+}
+
+
+/* Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  margin: 0;
+}
