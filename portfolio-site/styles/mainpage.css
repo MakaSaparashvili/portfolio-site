@@ -202,4 +202,165 @@ span {
   padding-bottom:20px;
 }
 
+/* Section3 */
+.cover {
+  max-width: 100%;
+  margin: 0 auto;
+  height: 1200px;
+  background-image: url('/assets/main2.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
 
+.cover-text {
+  padding-left: 298px;
+  padding-top: 435px;
+}
+.cover-title {
+  font-family: var(--font-fixture-bold);
+  font-size: 96px;
+  color: var(--header-red);
+}
+
+.cover-highlight {
+  font-family: var(--font-fixture-Italic);
+  font-size: 24px;
+  color: var(--background);
+}
+
+/* Featured */
+.featured-wrapper {
+    background: var(--background);
+    padding-top: 40px; 
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+
+.featured {
+  position: relative;
+  overflow: visible;
+  background: #e7a9c6;
+  padding: 60px 0 80px;
+  min-height: 650px;
+}
+
+.featured-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1590px;
+  margin: 0 auto;
+}
+
+.marquee {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -80px;
+  bottom: -40px;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.track {
+  white-space: nowrap;
+  font-family: var(--font-fixture-bold);
+  font-size: 250px;
+  line-height: 0.9;
+  color: var(--text-main);
+}
+
+.track-left {
+  animation: marqueeLeft 18s linear infinite;
+}
+
+.track-right {
+  animation: marqueeRight 18s linear infinite;
+}
+
+@keyframes marqueeLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.carousel-window {
+  flex: 1;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+  margin-top: 100px;
+}
+
+
+.arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #f5f5f5;
+  color: #111;
+  font-size: 24px;
+  cursor: pointer;
+  flex-shrink: 0;
+  z-index: 3;
+  margin-top: 90px;
+}
+
+
+.explore-btn {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 70px;
+  background: var(--header-red);
+  color: #ffffff;
+  font-family: var(--font-fixture-light);
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.featured-label { 
+  font-family: var(--font-fixture-Italic); 
+  font-size: 24px; color: var(--text-secondary); 
+  margin-top: 30px; 
+  padding-left: 180px; 
+}
