@@ -322,7 +322,7 @@ span {
   display: flex;
   gap: 25px;
   transition: transform 0.5s ease;
-  padding: 0;
+  padding-left: 50px;
 }
 
 .card {
@@ -331,7 +331,8 @@ span {
   border-radius: 20px;
   overflow: hidden;
   flex-shrink: 0;
-  margin-top: 110px;
+  margin-top: 90px;
+  padding-bottom: 60px;
 }
 
 .card-image {
@@ -354,7 +355,7 @@ span {
   color: #111;
   font-size: 24px;
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .arrow.left {
