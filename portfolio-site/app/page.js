@@ -14,10 +14,11 @@ const projects = [
 ];
 
 function Featured() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1);
 
   const visibleCards = 4;
   const cardWidth = 362; 
+  const offset = 180;
 
   const next = () => {
     if (index < projects.length - visibleCards) {
@@ -49,37 +50,39 @@ function Featured() {
         </div>
       </div>
 
-      <div className="featured-inner">
-        <div className="carousel-wrapper">
-          <button className="arrow" onClick={prev}>
-            ←
-          </button>
+<div className="featured-inner">
+  <div className="carousel">
+    <button className="arrow left" onClick={prev}>
+      ←
+    </button>
 
-          <div className="carousel-window">
-            <div
-              className="carousel-track"
-              style={{ transform: `translateX(-${index * cardWidth}px)` }}
-            >
-              {projects.map((item, i) => (
-                <div className="card" key={i}>
-                  <Image
-  src={item.image}
-  alt={`Project ${i + 1}`}
-  width={342}
-  height={399}
-/>
-                </div>
-              ))}
-            </div>
+    <button className="arrow right" onClick={next}>
+      →
+    </button>
+
+    <div className="carousel-window">
+      <div
+        className="carousel-track"
+        style={{ transform: `translateX(calc(-${index * cardWidth}px + ${offset}px))` }}
+      >
+        {projects.map((item, i) => (
+          <div className="card" key={i}>
+            <Image
+              src={item.image}
+              alt={`Project ${i + 1}`}
+              width={342}
+              height={399}
+              className="card-image"
+            />
           </div>
-
-          <button className="arrow" onClick={next}>
-            →
-          </button>
-        </div>
-
-        <button className="explore-btn">EXPLORE PROJECTS</button>
+        ))}
       </div>
+    </div>
+  </div>
+
+  <button className="explore-btn">EXPLORE PROJECTS</button>
+</div>
+
       </div>
     </section>
   );
@@ -113,7 +116,7 @@ export default function HomePage() {
           <a href="#companies" className="nav-link">
             Companies We Were Cool At
           </a>
-          <a href="/projects" className="nav-link">
+          <a href="#projects" className="nav-link">
             Cool Projects
           </a>
           <a href="#contact" className="nav-link">
@@ -273,8 +276,41 @@ export default function HomePage() {
           </h1>
         </div>
       </section>
-     <p className="featured-label">PROJECTS WE WERE COOL AT</p>
+       <p className="featured-label" id="projects">PROJECTS WE WERE COOL AT</p>
       <Featured />
+
+      <section className="contact-section" id="contact">
+  <div className="contact-container">
+    <div className="contact-left">
+      <h2 className="contact-title">
+        WANNA HANGOUT WITH THE
+        <br />
+        COOL KIDS? HIT CONTACT
+      </h2>
+
+      <form className="contact-form">
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Subject" />
+        <textarea placeholder="Message"></textarea>
+      </form>
+
+      <div className="contact-info">
+        <a href="mailto:coolthings@gmail.com">coolthings@gmail.com</a>
+        <span>+995 595 00 77 88 / +995 555 02 55 52</span>
+      </div>
+    </div>
+
+    <div className="contact-right">
+      <Image
+        src="/assets/contact.svg"
+        alt="Contact visual"
+        width={326}
+        height={488}
+        className="contact-image"
+      />
+    </div>
+  </div>
+      </section>
     </main>
   );
 }

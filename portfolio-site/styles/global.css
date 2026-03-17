@@ -34,3 +34,7 @@ a {
 h2 {
   margin: 0;
 }
+
+html {
+  scroll-behavior: smooth;
+}
